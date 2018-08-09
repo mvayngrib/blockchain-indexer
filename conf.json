@@ -1,0 +1,5 @@
+{
+  "network": "rinkeby",
+  "dir": "./",
+  "port": 8485
+}

@@ -6,7 +6,9 @@
   "bin": "./lib/cli/index.js",
   "scripts": {
     "test": "node lib/test",
-    "lint": "eslint --ignore-path .gitignore --quiet ."
+    "lint": "eslint --ignore-path .gitignore --quiet .",
+    "parity:rinkeby": "./scripts/parity.sh rinkeby",
+    "parity:main": "./scripts/parity.sh mainnet"
   },
   "keywords": [],
   "author": "",
