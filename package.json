@@ -2,7 +2,8 @@
   "name": "ethernode",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "bin": "./lib/cli/index.js",
   "scripts": {
     "test": "node lib/test",
     "lint": "eslint --ignore-path .gitignore --quiet ."
@@ -12,22 +13,28 @@
   "license": "ISC",
   "dependencies": {
     "@tradle/errors": "^1.1.1",
+    "bluebird": "^3.5.1",
+    "event-hooks": "^1.2.0",
     "eventemitter2": "^5.0.1",
     "level": "^4.0.0",
     "levelup": "^3.1.1",
     "lodash": "^4.17.10",
-    "merkle-patricia-tree": "^2.3.1",
     "pify": "^3.0.0",
     "protocol-buffers": "^4.0.4",
+    "pump": "^3.0.0",
+    "stream-collector": "^1.0.1",
     "subleveldown": "^3.0.1",
+    "through2": "^2.0.3",
     "traverse": "^0.6.6",
-    "web3": "^1.0.0-beta.35"
+    "web3-eth": "^1.0.0-beta.35",
+    "yargs": "^12.0.1"
   },
   "devDependencies": {
-    "ethereumjs-testrpc": "^6.0.3",
+    "ganache-cli": "^6.1.6",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
     "memdown": "^3.0.0",
+    "mkdirp": "^0.5.1",
     "standard-version": "^4.4.0",
     "tape": "^4.9.1"
   }
