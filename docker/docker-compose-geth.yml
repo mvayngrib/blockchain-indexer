@@ -1,0 +1,15 @@
+version: '2'
+services:
+  geth:
+    image: "ethereum/client-go"
+    restart: always
+    container_name: "geth-${CHAIN}"
+    command: "--networkid ${NETWORK_ID} --rpc --rpcaddr '0.0.0.0' --rpcport 8545 --ws --wsaddr '0.0.0.0' --wsport 8546 --syncmode fast --verbosity 4"
+    volumes:
+      - "$HOME/.ethereum-docker/${CHAIN}/:/root/.ethereum/"
+    ports:
+      # - 8180:8180
+      - 8545:8545
+      - 8546:8546
+      # - 30303:30303
+      # - 30303:30303/udp
