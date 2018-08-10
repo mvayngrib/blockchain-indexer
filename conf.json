@@ -1,8 +1,0 @@
-{
-  "network": "ropsten",
-  "dir": "./",
-  "port": 8546,
-  "blocksPerBatch": 100,
-  "startBlock": 200000,
-  "confirmationHeight": 15
-}
