@@ -27,6 +27,7 @@ module.exports = {
     "semi": [
       "error",
       "never"
-    ]
+    ],
+    "no-constant-condition": 1
   }
 };

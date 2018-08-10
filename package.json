@@ -1,12 +1,13 @@
 {
   "name": "ethernode",
   "version": "1.0.0",
-  "description": "",
+  "description": "indexer for ethereum blockchain to map addrs -> txs",
   "main": "./lib/index.js",
   "bin": "./lib/cli/index.js",
   "scripts": {
     "test": "node lib/test",
     "lint": "eslint --ignore-path .gitignore --quiet .",
+    "precommit": "npm run lint && npm test",
     "parity:ropsten": "CHAIN=ropsten docker-compose -f ./docker/docker-compose-parity.yml up -d",
     "parity:ropsten:stop": "CHAIN=ropsten docker-compose -f ./docker/docker-compose-parity.yml stop",
     "parity:main": "CHAIN=mainnet docker-compose -f ./docker/docker-compose-parity.yml up -d",
@@ -46,6 +47,7 @@
     "lint-staged": "^7.2.0",
     "memdown": "^3.0.0",
     "mkdirp": "^0.5.1",
+    "node-fetch": "^2.2.0",
     "standard-version": "^4.4.0",
     "tape": "^4.9.1"
   }
