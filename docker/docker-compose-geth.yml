@@ -1,7 +1,7 @@
 version: '2'
 services:
   geth:
-    image: "ethereum/client-go"
+    image: "ethereum/client-go:stable"
     restart: always
     container_name: "geth-${CHAIN}"
     command: "--networkid ${NETWORK_ID} --rpc --rpcaddr '0.0.0.0' --rpcport 8545 --ws --wsaddr '0.0.0.0' --wsport 8546 --syncmode fast --verbosity 4"

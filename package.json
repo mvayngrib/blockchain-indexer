@@ -13,8 +13,8 @@
     "parity:main:stop": "CHAIN=mainnet docker-compose -f ./docker/docker-compose-parity.yml stop",
     "geth:ropsten": "NETWORK_ID=3 CHAIN=ropsten docker-compose -f ./docker/docker-compose-geth.yml up -d",
     "geth:ropsten:stop": "NETWORK_ID=3 CHAIN=ropsten docker-compose -f ./docker/docker-compose-geth.yml stop",
-    "geth:rinkeby": "NETWORK_ID=4 CHAIN=rinkeby docker-compose -f ./docker/docker-compose-geth.yml up -d",
-    "geth:rinkeby:stop": "NETWORK_ID=4 CHAIN=rinkeby docker-compose -f ./docker/docker-compose-geth.yml stop",
+    "geth:rinkeby": "docker-compose -f ./docker/docker-compose-geth-rinkeby.yml up -d",
+    "geth:rinkeby:stop": "docker-compose -f ./docker/docker-compose-geth-rinkeby.yml stop",
     "geth:main": "NETWORK_ID=1 CHAIN=mainnet docker-compose -f ./docker/docker-compose-geth.yml up -d",
     "geth:main:stop": "NETWORK_ID=1 CHAIN=mainnet docker-compose -f ./docker/docker-compose-geth.yml stop",
     "start": "./lib/cli/index.js start"
