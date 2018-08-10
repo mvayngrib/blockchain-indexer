@@ -7,8 +7,11 @@
   "scripts": {
     "test": "node lib/test",
     "lint": "eslint --ignore-path .gitignore --quiet .",
-    "parity:rinkeby": "./scripts/parity.sh rinkeby",
-    "parity:main": "./scripts/parity.sh mainnet"
+    "parity:ropsten": "CHAIN=ropsten docker-compose up -d",
+    "parity:ropsten:stop": "CHAIN=ropsten docker-compose stop",
+    "parity:main": "CHAIN=mainnet docker-compose up -d",
+    "parity:main:stop": "CHAIN=mainnet docker-compose stop",
+    "start": "./lib/cli/index.js start"
   },
   "keywords": [],
   "author": "",

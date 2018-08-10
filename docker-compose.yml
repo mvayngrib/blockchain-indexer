@@ -1,0 +1,16 @@
+version: '2'
+services:
+  parity:
+    image: "parity/parity:latest"
+    restart: always
+    container_name: "parity-${CHAIN}"
+    working_dir: /parity/
+    command: " --chain ${CHAIN} --jsonrpc-interface all --ws-interface all --ui-interface all -l sync=trace"
+    volumes:
+      - "$HOME/.parity/share/io.parity.ethereum/docker/${CHAIN}/:/root/.local/share/io.parity.ethereum/"
+    ports:
+      # - 8180:8180
+      - 8545:8545
+      - 8546:8546
+      # - 30303:30303
+      # - 30303:30303/udp
