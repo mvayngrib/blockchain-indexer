@@ -5,7 +5,8 @@ services:
     restart: always
     container_name: "parity-${CHAIN}"
     working_dir: /parity/
-    command: "--chain ${CHAIN} --jsonrpc-interface all --ws-interface all --ws-origins all"
+    # see parity-settings.png
+    command: "--chain ${CHAIN} --jsonrpc-interface all --ws-interface all --ws-origins all --no-warp"
     volumes:
       - "$HOME/.parity/share/io.parity.ethereum/docker/${CHAIN}/:/root/.local/share/io.parity.ethereum/"
     ports:
