@@ -1,5 +1,5 @@
 {
-  "name": "ethernode",
+  "name": "blockchain-indexer",
   "version": "1.0.0",
   "description": "indexer for ethereum blockchain to map addrs -> txs",
   "main": "./lib/index.js",
@@ -20,9 +20,13 @@
     "geth:mainnet:stop": "NETWORK_ID=1 CHAIN=mainnet docker-compose -f ./docker/docker-compose-geth.yml stop",
     "start": "./lib/cli/index.js start"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "indexes"
+  ],
+  "author": "mvayngrib",
+  "license": "MIT",
   "dependencies": {
     "@tradle/errors": "^1.1.1",
     "bluebird": "^3.5.1",
