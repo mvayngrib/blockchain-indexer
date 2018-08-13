@@ -1,6 +1,18 @@
 
 ## ethereum node
 
+[Various Charts & Stats](https://etherscan.io/charts)
+  - [geth fast sync chain data size](https://etherscan.io/chart2/chaindatasizefast)
+  - [transaction fees](https://etherscan.io/chart/transactionfee)
+  - [gas price](https://etherscan.io/chart/gasprice)
+  - [address growth](https://etherscan.io/chart/address)
+  - [block size](https://etherscan.io/chart/blocksize)
+
+read this and weep (all on same thread):
+- https://github.com/ethereum/go-ethereum/issues/16218#issuecomment-371454280
+- https://github.com/ethereum/go-ethereum/issues/16218#issuecomment-380021850
+- https://github.com/ethereum/go-ethereum/issues/16218#issuecomment-380023338
+
 ### parity
 
 #### warp sync

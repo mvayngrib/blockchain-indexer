@@ -1,15 +1,29 @@
 version: '2'
+# networks:
+#   oneip:
+#     driver: bridge
+#     ipam:
+#       config:
+#         - subnet: 192.168.0.0/24
+#           gateway: 192.168.0.1
+
 services:
   geth:
     image: "ethereum/client-go:stable"
     restart: always
     container_name: "geth-${CHAIN}"
-    command: "--networkid ${NETWORK_ID} --rpc --rpcaddr '0.0.0.0' --rpcport 8545 --ws --wsaddr '0.0.0.0' --wsport 8546 --syncmode fast --verbosity 4"
+    command: "--networkid ${NETWORK_ID} --rpc --rpcaddr '0.0.0.0' --rpcport 8545 --ws --wsaddr '0.0.0.0' --wsport 8546 --syncmode fast --cache 4096"
+    # network_mode: bridge
+    # networks:
+    #   - oneip
+    # extra_hosts:
+    #   - localhost:192.168.0.1
     volumes:
-      - "$HOME/.ethereum-docker/${CHAIN}/:/root/.ethereum/"
+      - "$HOME/.geth/${CHAIN}/:/root/.ethereum/"
     ports:
       # - 8180:8180
       - 8545:8545
       - 8546:8546
-      # - 30303:30303
-      # - 30303:30303/udp
+      # - 30301:30301/udp
+      - 30303:30303
+      - 30303:30303/udp

@@ -16,8 +16,9 @@
     "geth:ropsten:stop": "NETWORK_ID=3 CHAIN=ropsten docker-compose -f ./docker/docker-compose-geth.yml stop",
     "geth:rinkeby": "docker-compose -f ./docker/docker-compose-geth-rinkeby.yml up -d",
     "geth:rinkeby:stop": "docker-compose -f ./docker/docker-compose-geth-rinkeby.yml stop",
-    "geth:mainnet": "NETWORK_ID=1 CHAIN=mainnet docker-compose -f ./docker/docker-compose-geth.yml up -d",
+    "geth:mainnet": "HOST_IP=$(ipconfig getifaddr en0) NETWORK_ID=1 CHAIN=mainnet docker-compose -f ./docker/docker-compose-geth.yml up -d",
     "geth:mainnet:stop": "NETWORK_ID=1 CHAIN=mainnet docker-compose -f ./docker/docker-compose-geth.yml stop",
+    "get:height": "node scripts/web3.js getBlockNumber",
     "start": "./lib/cli/index.js start"
   },
   "keywords": [
