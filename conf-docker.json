@@ -1,0 +1,15 @@
+{
+  "dir": "/data/blockchain-indexer/",
+  "node": {
+    "httpPort": 8545,
+    "wsPort": 8546
+  },
+  "port": 9898,
+  "blocksPerBatch": 100,
+  "startBlock": 6000000,
+  "confirmationHeight": 15,
+  "storage": "leveldb",
+  "redis": {
+    "port": 6380
+  }
+}
