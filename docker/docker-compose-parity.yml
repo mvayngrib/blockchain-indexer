@@ -8,14 +8,14 @@ services:
       - "${HOME}/.parity/redis:/data"
 
   parity:
-    image: "parity/parity:latest"
+    image: "parity/parity:stable"
     restart: always
     container_name: "parity-${CHAIN}"
     working_dir: /parity/
     # see parity-settings.png
     command: "--chain ${CHAIN} --jsonrpc-interface all --ws-interface all --ws-origins all --no-warp"
     volumes:
-      - "$HOME/.parity/share/io.parity.ethereum/docker/${CHAIN}/:/root/.local/share/io.parity.ethereum/"
+      - "$HOME/.parity/share/io.parity.ethereum/docker/${CHAIN}:/root/.local/share/io.parity.ethereum/"
     ports:
       # - 8180:8180
       - 8545:8545
