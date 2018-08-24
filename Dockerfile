@@ -13,4 +13,7 @@ ADD conf-docker.json conf.json
 VOLUME /root/.eth-indexer/
 
 EXPOSE 9898
+
+ENTRYPOINT []
+
 CMD ["npm", "start"]
