@@ -67,7 +67,7 @@ get an addresses transactions by its hash
 ```sh
 curl localhost:9898/address/:hash
 
-# {"txsIn":["..hash.."],"txsOut":["..hash.."]}
+# {"txs":[{ "blockNumber": number, "hash": string, "inbound": boolean }]}
 ```
 #### /height
 
