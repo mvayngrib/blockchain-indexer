@@ -1,5 +1,5 @@
 {
-  "name": "blockchain-indexer",
+  "name": "@tradle/blockchain-indexer",
   "version": "1.0.0",
   "description": "indexer for ethereum blockchain to map addrs -> txs",
   "main": "./lib/index.js",
@@ -38,7 +38,6 @@
     "bluebird": "^3.5.1",
     "event-hooks": "^1.2.0",
     "eventemitter2": "^5.0.1",
-    "jsend": "^1.0.2",
     "koa": "^2.5.2",
     "koa-router": "^7.4.0",
     "level": "^4.0.0",
