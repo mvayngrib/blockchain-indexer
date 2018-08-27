@@ -39,6 +39,7 @@
     "event-hooks": "^1.2.0",
     "eventemitter2": "^5.0.1",
     "koa": "^2.5.2",
+    "koa-body": "^4.0.4",
     "koa-router": "^7.4.0",
     "level": "^4.0.0",
     "levelup": "^3.1.1",
