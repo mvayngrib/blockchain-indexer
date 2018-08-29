@@ -4,7 +4,7 @@ FROM node:8.11.4
 #     apk add --no-cache bash git openssh python make gcc
 
 WORKDIR /app
-ADD package.json .
+ADD package.json npm-shrinkwrap.json ./
 RUN npm install --production
 
 ADD . .
