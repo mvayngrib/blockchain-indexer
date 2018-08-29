@@ -9,10 +9,15 @@ services:
     volumes:
       - "$HOME/.parity/share/io.parity.ethereum/docker/${CHAIN}/:/root/.local/share/io.parity.ethereum/"
     ports:
+      # # ui
       # - 8180:8180
+      # jsonrpc
       - 8545:8545
+      # ws
       - 8546:8546
+      # listener
       # - 30303:30303
+      # discovery
       # - 30303:30303/udp
 
   indexer:
