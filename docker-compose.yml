@@ -33,4 +33,4 @@ services:
       START_BLOCK: 0
       CONFIRMATION_HEIGHT: 15
     ports:
-      - 9898:9898
+      - 3000:3000

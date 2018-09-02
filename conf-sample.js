@@ -9,7 +9,7 @@ module.exports = {
   // height at which a block is considered confirmed
   confirmationHeight: 15,
   // exported API port
-  port: 9898,
+  port: 3000,
   storage: 'leveldb',
   // or redi:
   // storage: 'redis',

@@ -4,11 +4,12 @@
     "httpPort": 8545,
     "wsPort": 8546
   },
-  "port": 9898,
+  "port": 3000,
   "blocksPerBatch": 100,
   "startBlock": 6000000,
   "confirmationHeight": 15,
   "storage": "leveldb",
+  "prefixPathWithNetworkName": true,
   "redis": {
     "port": 6380
   }

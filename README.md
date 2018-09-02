@@ -22,7 +22,7 @@ const components = createBIndexer({
   nodeHTTPPort: 8545,
   nodeWSPort: 8546,
   // port to run HTTP server on
-  port: 9898,
+  port: 3000,
   // how many blocks to wait for, before processing
   blocksPerBatch: 100,
   startBlock: 203700,
@@ -54,7 +54,7 @@ const {
 get a transaction by its hash
 
 ```sh
-curl localhost:9898/tx/:hash
+curl localhost:3000/tx/:hash
 
 # same as eth_getTransactionByHash
 
@@ -65,7 +65,7 @@ curl localhost:9898/tx/:hash
 get an addresses transactions by its hash
 
 ```sh
-curl localhost:9898/address/:hash
+curl localhost:3000/address/:hash
 
 # {"txs":[{ "blockNumber": number, "hash": string, "inbound": boolean }]}
 ```
@@ -74,7 +74,7 @@ curl localhost:9898/address/:hash
 get processed chain height
 
 ```sh
-curl localhost:9898/height
+curl localhost:3000/height
 
 # 1038402
 ```

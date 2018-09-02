@@ -12,7 +12,7 @@ ADD conf-docker.json conf.json
 
 VOLUME /root/.eth-indexer/
 
-EXPOSE 9898
+EXPOSE 3000
 
 ENTRYPOINT []
 

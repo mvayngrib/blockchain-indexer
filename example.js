@@ -6,7 +6,7 @@ const components = createBIndexer({
   nodeHTTPPort: 8545,
   nodeWSPort: 8546,
   // port to run HTTP server on
-  port: 9898,
+  port: 3000,
   blocksPerBatch: 100,
   startBlock: 203700,
   confirmationHeight: 15,
