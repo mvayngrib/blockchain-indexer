@@ -45,7 +45,7 @@ if [ $REPO_URL == "null" ]; then
 fi
 
 BUILD_PATH=.
-`aws --profile $AWS_PROFILE ecr get-login --no-include-email`
+`aws ecr get-login --no-include-email`
 TAG="$REPO_URL:latest"
 build $TAG $BUILD_PATH
 upload $TAG
