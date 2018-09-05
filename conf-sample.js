@@ -20,8 +20,11 @@ module.exports = {
   // NOT COMMON
 
   // non-'private' network
-  nodeHTTPPort: 8545,
-  nodeWSPort: 8546,
+  node: {
+    hostname: 'localhost',
+    httpPort: 8545,
+    wsPort: 8546,
+  },
 
   // 'private' network
   // blocks per second to mint

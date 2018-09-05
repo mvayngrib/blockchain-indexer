@@ -7,7 +7,7 @@
   "port": 3000,
   "blocksPerBatch": 100,
   "startBlock": 6000000,
-  "confirmationHeight": 15,
+  "confirmationHeight": 40,
   "storage": "leveldb",
   "prefixPathWithNetworkName": true,
   "redis": {

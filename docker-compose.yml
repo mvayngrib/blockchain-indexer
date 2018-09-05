@@ -28,7 +28,7 @@ services:
       - "$HOME/.eth-indexer/${CHAIN}/:/root/.eth-indexer/"
     environment:
       NODE_NETWORK: "${CHAIN}"
-      NODE_HOST: 'ethereum'
+      NODE_HOSTNAME: 'ethereum'
       DEBUG: 'tradle:*'
       START_BLOCK: 0
       CONFIRMATION_HEIGHT: 15
