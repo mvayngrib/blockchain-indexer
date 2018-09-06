@@ -12,7 +12,6 @@ RUN npm install --production
 ADD . .
 ADD conf-docker.json conf.json
 ADD pm2.json .
-RUN ls -al -R
 
 VOLUME /root/.eth-indexer/
 
