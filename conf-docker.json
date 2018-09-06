@@ -1,5 +1,4 @@
 {
-  "dir": "/data/blockchain-indexer/",
   "node": {
     "httpPort": 8545,
     "wsPort": 8546
