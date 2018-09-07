@@ -9,7 +9,7 @@ services:
       - "${HOME}/.parity/redis-${CHAIN}:/data"
 
   parity:
-    image: "parity/parity:stable"
+    image: "parity/parity:latest"
     restart: always
     container_name: "parity-${CHAIN}"
     working_dir: /parity/
